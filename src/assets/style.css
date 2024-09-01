@@ -1,0 +1,169 @@
+/* style.css */
+/* Todo list styles */
+
+body {
+    background-color: #8f4df8
+}
+header.title h1{
+    margin: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+div.container {
+
+    .todo-listing{
+        padding: 0px 29px 0 0;
+        margin-top: 0px;
+    }
+
+    .fl-box {
+        float: left;
+        width: 100%;
+        position: relative
+    }
+
+    .fr-box{
+        float: right;
+        position: relative
+    }
+
+    .main-todo-container-item {
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+        height: 50px;
+        position: relative
+    }
+
+    .main-todo-container-item input {
+        float: left;
+        border: none;
+        width: 60%;
+        height: 50px;
+        padding-left: 20px;
+        background: #fff;
+    }
+
+    .main-todo-container-item select {
+        float: left;
+        border: none;
+        width: 40%;
+        height: 50px;
+        cursor: pointer;
+        border-radius: 0px;
+        background: #BEE3F3;
+        color: #fff;
+    }
+
+    .main-todo-container-item select option {
+        text-align: center;
+        cursor: pointer;
+    }
+    .main-todo-container-item select option:hover {
+        background: none;
+    }
+
+    .add-edit-button {
+        background: #439BD6
+    }
+
+    .remove-icon{
+        float: right;
+        color: #757575;
+        font-size: 18px;
+    }
+
+    ul.list-items{
+        padding-left: 20px;
+        padding-top: 15px;
+        text-align:left;
+        list-style:none;
+    }
+
+    .todo-text{
+        color: #757575;
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .toolbar {
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+    button .border-right {
+        border-right: 2px solid white;
+    }
+    li.list-row {
+        cursor: pointer;
+    }
+}
+
+.todo-box {
+    max-width: 500px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.main-todo-container {
+    background: #fff;
+    padding: 0 120px 0 0;
+    border-radius: 1px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.3)
+}
+.main-todo-container:before {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    width: 50px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.41);
+    left: 50%;
+    margin-left: -25px
+}
+
+.add-edit-button {
+    position: absolute;
+    right: 0px;
+    height: 50px;
+    width: 120px;
+    color: #fff;
+    top: 0;
+    border: none;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    cursor: pointer
+}
+
+:focus {
+    outline: 0
+}
+
+@media only screen and (max-width: 768px) {
+    div.container {
+        .main-todo-container {
+            padding: 14px 20px 10px;
+            border-radius: 10px;
+        }
+
+        .main-todo-container-item input {
+            border: 1px solid #eee;
+        }
+
+        .main-todo-container-item {
+            width: 100%;
+            border: 1px solid #eee;
+            height: 50px;
+            border: none;
+            margin-bottom: 10px
+        }
+
+        .add-edit-button {
+            position: relative;
+            float: left;
+            width: 100%;
+            border-radius: 6px
+        }
+    }
+}
