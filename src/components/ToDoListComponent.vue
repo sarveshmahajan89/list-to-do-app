@@ -21,8 +21,8 @@
       <div class="col-md-12">
         <div class="todo-box toolbar">
           <div class="btn-group fr-box" role="group" aria-label="Basic example">
-            <button class="btn btn-primary border-right" @click="sortList"><i class="fa fa-sort"></i></button>
-            <button class="btn btn-primary" @click="clearAll">CLEAR</button>
+            <button id="sort-button" class="btn btn-primary border-right" @click="sortList"><i class="fa fa-sort"></i></button>
+            <button id="clear-button" class="btn btn-primary" @click="clearAll">CLEAR</button>
           </div>
         </div>
       </div>
