@@ -1,6 +1,6 @@
 # List To Do APP
 
-This is the List To Do APP (https://github.com/sarveshmahajan89/String-Calculator-TDD-Kata.git).
+This is the List To Do APP (https://github.com/sarveshmahajan89/list-to-do-app.git).
 
 ## Customize configuration
 
