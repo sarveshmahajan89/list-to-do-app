@@ -5,13 +5,13 @@
         <div class="todo-box">
           <div class="main-todo-container fl-box">
             <div class="main-todo-container-item">
-              <input type="text" id="todo-list-item" placeholder="Add item to the list..." v-model="userInput">
-              <select  v-model="selectedPriority">
+              <input type="text" id="todo-list-item" title="Add item to the list" placeholder="Enter to do item" v-model="userInput">
+              <select v-model="selectedPriority" title="Select priority">
                 <option value="" :selected disabled>Priority</option>
                 <option v-for="(field) in priorityList" :value="field.value" :class="field.class">{{field.text}}</option>
               </select>
             </div>
-            <button class="add-items add-edit-button" @click="addItem">{{isEditMode ? 'Update' : 'ADD'}}</button>
+            <button class="add-items add-edit-button" title="Add or Update" @click="addItem">{{isEditMode ? 'Update' : 'ADD'}}</button>
           </div>
         </div>
       </div>
@@ -21,8 +21,8 @@
       <div class="col-md-12">
         <div class="todo-box toolbar">
           <div class="btn-group fr-box" role="group" aria-label="Basic example">
-            <button id="sort-button" class="btn btn-primary border-right" @click="sortList"><i class="fa fa-sort"></i></button>
-            <button id="clear-button" class="btn btn-primary" @click="clearAll">CLEAR</button>
+            <button id="sort-button" class="btn btn-primary border-right" @click="sortList" title="Sort List based on priority"><i class="fa fa-sort"></i></button>
+            <button id="clear-button" class="btn btn-primary" @click="clearAll" title="Clear list">CLEAR</button>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@
                 <span class='todo-text'>{{item.value}}</span>&nbsp;
                 <span class="badge" :class="item.priority === 'critical' ? 'bg-danger' : item.priority === 'moderate' ? 'bg-warning' : 'bg-info'">{{ item.priority }}</span>
                 <a class='remove-icon text-right'>
-                  <i class='fa fa-trash' @click="deleteItem(index, $event)"></i>
+                  <i class='fa fa-trash' @click="deleteItem(index, $event)" title="Delete"></i>
                 </a>
                 <hr>
               </li>
