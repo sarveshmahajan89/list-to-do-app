@@ -52,7 +52,7 @@ div.container {
         height: 50px;
         cursor: pointer;
         border-radius: 0px;
-        background: #BEE3F3;
+        background: #1FD0BF;
         color: #fff;
     }
 
@@ -62,10 +62,6 @@ div.container {
     }
     .main-todo-container-item select option:hover {
         background: none;
-    }
-
-    .add-edit-button {
-        background: #439BD6
     }
 
     .remove-icon{
@@ -129,6 +125,7 @@ div.container {
     height: 50px;
     width: 120px;
     color: #fff;
+    background: #2E8EFD;
     top: 0;
     border: none;
     border-top-right-radius: 0px;

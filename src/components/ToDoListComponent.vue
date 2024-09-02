@@ -35,7 +35,7 @@
             <ul class="list-items">
               <li title="Click to edit" class="list-row" v-for="(item, index) in list" @click="editItem(index)">
                 <span class='todo-text'>{{item.value}}</span>&nbsp;
-                <span class="badge" :class="item.priority === 'high' ? 'bg-danger' : item.priority === 'medium' ? 'bg-warning' : 'bg-info'">{{ item.priority }}</span>
+                <span class="badge" :class="item.priority === 'critical' ? 'bg-danger' : item.priority === 'moderate' ? 'bg-warning' : 'bg-info'">{{ item.priority }}</span>
                 <a class='remove-icon text-right'>
                   <i class='fa fa-trash' @click="deleteItem(index, $event)"></i>
                 </a>
@@ -58,21 +58,21 @@ export default {
       list: JSON.parse(localStorage.getItem('toDoList')) || [],
       priorityList: [
         {
-          value: 'high',
+          value: 'critical',
           class: "bg-danger",
-          text: 'High',
+          text: 'Critical',
           priority: 0
         },
         {
-          value: 'medium',
+          value: 'moderate',
           class: "bg-warning",
-          text: 'Medium',
+          text: 'Moderate',
           priority: 1
         },
         {
-          value: 'low',
+          value: 'optional',
           class: "bg-info",
-          text: 'Low',
+          text: 'Optional',
           priority: 2
         }
       ],
@@ -104,9 +104,9 @@ export default {
     sortList() {
       const priorities =
         {
-          'high' : 0,
-          'medium' : 1,
-          'low' : 2
+          'critical' : 0,
+          'moderate' : 1,
+          'optional' : 2
         }
       this.list.sort( (task1, task2) => {
         return priorities[task1.priority] - priorities[task2.priority];
